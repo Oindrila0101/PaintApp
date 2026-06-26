@@ -1,1 +1,91 @@
-<p>PAINTAPP</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <img src="logo.png" alt="Logo" class="logo">
+
+        <!-- Colors -->
+        <div class="card">
+          <div class="card-header">
+          <h3>Colors</h3>
+              <button class="picker" id="openPalette">🎨</button>
+              <input type="color" id="colorPicker" hidden>
+           </div>
+
+            <div class="palette">
+                <span class="color black"></span>
+                <span class="color red"></span>
+                <span class="color green"></span>
+                <span class="color yellow"></span>
+
+                <span class="color purple"></span>
+                <span class="color pink"></span>
+                <span class="color brown"></span>
+                <span class="color blue"></span>
+
+                <span class="color olive"></span>
+                <span class="color orange"></span>
+                <span class="color violet"></span>
+                <span class="color white"></span>
+            </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="card">
+            <h3>Tools</h3>
+
+            <select id="tool">
+                <option>Pencil</option>
+                <option>Eraser</option>
+                <option>Line</option>
+                <option>Rectangle</option>
+                <option>Circle</option>
+                <option>Triangle</option>
+            </select>
+
+            <label>Brush Size</label>
+            <input type="range" id="brushSize" min="1" max="40" value="5">
+        </div>
+
+        <!-- Layers -->
+        <div class="card">
+            <h3>Layers</h3>
+
+            <button id="clearCanvas">Clear Canvas</button>
+            <button id="savePNG">Save PNG</button>
+        </div>
+
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Top Navigation -->
+        <div class="navbar">
+            <button id="homeBtn">Home</button>
+            <button id="galleryBtn">Gallery</button>
+            <button id="profileBtn">Profile</button>
+        </div>
+
+        <!-- Canvas Area -->
+        <div class="workspace">
+            <h2>Artwork</h2>
+
+            <canvas id="canvas"></canvas>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
